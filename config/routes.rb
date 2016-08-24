@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+  resources 'author'
+  resources 'exhibition'
+  resources 'genre'
+  resources 'order'
+  resources 'personell'
+  resources 'custom'
+  resources 'picture'
+
   get 'welcome/index'
   root to: 'welcome#index'
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
