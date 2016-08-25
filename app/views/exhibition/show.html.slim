@@ -1,0 +1,9 @@
+.row
+  - @pictures.each do |picture|
+    .col-sm-6.col-md-2.picture
+      .thu style="background-image: url(#{picture.image}); width: 100%; height: 300px;"
+      .caption
+        h4
+          = picture.name
+        p
+          = picture.date

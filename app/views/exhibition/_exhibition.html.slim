@@ -1,0 +1,10 @@
+.row
+  - @exhibitions.each do |exh|
+    .col-sm-6.col-md-2.picture
+      .thumbnail
+        = image_tag("https://image.freepik.com/free-vector/logo-ballons-logotype_355-1165.jpg")
+      .caption
+        h4
+          = link_to exh.location, exhibition_path(exh)
+        p
+          = exh.date

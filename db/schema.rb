@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160824180256) do
+ActiveRecord::Schema.define(version: 20160825201955) do
 
   create_table "authors", force: :cascade do |t|
     t.integer  "pasport_number"
@@ -35,6 +35,8 @@ ActiveRecord::Schema.define(version: 20160824180256) do
     t.integer  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "picture_id"
+    t.index ["picture_id"], name: "index_exhibitions_on_picture_id"
   end
 
   create_table "genres", force: :cascade do |t|
